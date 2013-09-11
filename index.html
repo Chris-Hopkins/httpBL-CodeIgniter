@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Httpbl-codeigniter by Chris-Hopkins</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Httpbl-codeigniter</h1>
+        <p>Make use of the Project Honey Pot http:BL in CodeIgniter.</p>
+
+        <p class="view"><a href="https://github.com/Chris-Hopkins/httpBL-CodeIgniter">View the Project on GitHub <small>Chris-Hopkins/httpBL-CodeIgniter</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Chris-Hopkins/httpBL-CodeIgniter/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Chris-Hopkins/httpBL-CodeIgniter/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Chris-Hopkins/httpBL-CodeIgniter">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="httpbl-codeigniter" class="anchor" href="#httpbl-codeigniter"><span class="octicon octicon-link"></span></a>httpBL-CodeIgniter</h1>
+
+<p>Make use of the Project Honey Pot http:BL in CodeIgniter.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<ol>
+<li>PHP 5.1+</li>
+<li>CodeIgniter 2.0.x - 2.0-dev</li>
+<li>http:BL Access Key</li>
+</ol><h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Simple interface into the Honey Pot Project's http:BL API</li>
+<li>Choice of responses (Standard, Pretty, Developer)</li>
+<li>Search Engine detection</li>
+<li>Debugging information</li>
+</ul><h2>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<pre><code>$this-&gt;load-&gt;library('httpbl'); 
+</code></pre>
+
+<h3>
+<a name="standard-response" class="anchor" href="#standard-response"><span class="octicon octicon-link"></span></a>Standard response</h3>
+
+<p>This function returns the standard http:BL API response</p>
+
+<pre><code>// Retrieve standard response
+$this-&gt;httpbl-&gt;standard('216.239.57.99');
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>127.0.0.3
+</code></pre>
+
+<h3>
+<a name="pretty-response" class="anchor" href="#pretty-response"><span class="octicon octicon-link"></span></a>Pretty response</h3>
+
+<p>This function returns a detailed version of the http:BL API response</p>
+
+<pre><code>// Retrieve pretty response
+$this-&gt;httpbl-&gt;pretty('216.239.57.99');
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>&lt;font color="red"&gt;&lt;b&gt;Dangerous IP&lt;/b&gt;&lt;/font&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;IP Address: &lt;/b&gt;60.182.190.2&lt;br /&gt;&lt;b&gt;Type:&lt;/b&gt; Suspicious &amp; Comment Spammer&lt;br /&gt;&lt;b&gt;Threat Level: &lt;/b&gt;21 out of 255&lt;br /&gt;&lt;b&gt;Last Seen: &lt;/b&gt;1 day ago&lt;br /&gt;
+</code></pre>
+
+<h3>
+<a name="developer-response" class="anchor" href="#developer-response"><span class="octicon octicon-link"></span></a>Developer response</h3>
+
+<p>This function returns the standard response but in a PHP array, JSON or XML format.</p>
+
+<pre><code>// Retrieve developer response
+$this-&gt;httpbl-&gt;dev('216.239.57.99');
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>Array ( [int] =&gt; 127 [days] =&gt; 1 [threat] =&gt; 21 [type] =&gt; 5 )
+</code></pre>
+
+<p>The default developer response is set to PHP array. For JSON or XML pass a second arguement.</p>
+
+<pre><code>// Retrieve developer response in JSON
+$this-&gt;httpbl-&gt;dev('216.239.57.99','json');
+</code></pre>
+
+<p><strong>Output:</strong></p>
+
+<pre><code>{
+    "int": 127,
+    "days": 1,
+    "threat": 21,
+    "type": 5
+}
+
+## Download
+</code></pre>
+
+<p><a href="http://chriz.co.uk/ci/sparks/httpbl-codeigniter/">http://chriz.co.uk/ci/sparks/httpbl-codeigniter/</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Chris-Hopkins">Chris-Hopkins</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
