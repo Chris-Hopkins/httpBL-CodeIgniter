@@ -48,7 +48,7 @@ This function returns the standard response but in a PHP array, JSON or XML form
 	// Retrieve developer response
 	$this->httpbl->dev('216.239.57.99');
 
-Output:
+#### Output:
 
 	Array ( [int] => 127 [days] => 1 [threat] => 21 [type] => 5 )
 
@@ -57,7 +57,7 @@ The default developer response is set to PHP array. For JSON or XML pass a secon
 	// Retrieve developer response in JSON
 	$this->httpbl->dev('216.239.57.99','json');
 
-Output:
+#### Output:
 
 	{
 		"int": 127,
