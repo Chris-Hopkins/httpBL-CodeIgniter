@@ -66,6 +66,8 @@ The default developer response is set to PHP array. For JSON or XML pass a secon
 		"type": 5
 	}
 
+------------------------------------------------
+
 ## Download
 
 http://chriz.co.uk/ci/sparks/httpbl-codeigniter/
